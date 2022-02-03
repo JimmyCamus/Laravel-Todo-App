@@ -937,6 +937,41 @@ var Form = function Form(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/components/HomeContent.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/HomeContent.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _styles_StyledCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/StyledCard */ "./resources/js/styles/StyledCard.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var HomeContent = function HomeContent() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_styles_StyledCard__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+        children: "To start adding todos you have to be logged in"
+      })
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeContent);
+
+/***/ }),
+
 /***/ "./resources/js/components/Input.js":
 /*!******************************************!*\
   !*** ./resources/js/components/Input.js ***!
@@ -1972,9 +2007,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _utils_isLoggedin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/isLoggedin */ "./resources/js/utils/isLoggedin.js");
-/* harmony import */ var _components_TodoContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TodoContent */ "./resources/js/components/TodoContent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_HomeContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/HomeContent */ "./resources/js/components/HomeContent.js");
+/* harmony import */ var _utils_isLoggedin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/isLoggedin */ "./resources/js/utils/isLoggedin.js");
+/* harmony import */ var _components_TodoContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/TodoContent */ "./resources/js/components/TodoContent.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -1982,12 +2019,12 @@ __webpack_require__.r(__webpack_exports__);
 var HomePage = function HomePage(_ref) {
   var user = _ref.user;
 
-  if (!(0,_utils_isLoggedin__WEBPACK_IMPORTED_MODULE_0__["default"])(user)) {
-    return null;
+  if (!(0,_utils_isLoggedin__WEBPACK_IMPORTED_MODULE_1__["default"])(user)) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_HomeContent__WEBPACK_IMPORTED_MODULE_0__["default"], {});
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_TodoContent__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_TodoContent__WEBPACK_IMPORTED_MODULE_2__["default"], {})
   });
 };
 
